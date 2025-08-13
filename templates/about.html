@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h1>About This Flask Demo</h1>
+
+<p>This is a basic Flask application designed to demonstrate fundamental web development concepts and Flask framework features.</p>
+
+<h2>What This Demo Includes</h2>
+
+<h3>Core Flask Features</h3>
+<ul>
+    <li><strong>Route Handling:</strong> Multiple URL routes with different HTTP methods</li>
+    <li><strong>Template Engine:</strong> Jinja2 templates with inheritance</li>
+    <li><strong>Request Processing:</strong> Handling GET and POST requests</li>
+    <li><strong>JSON API:</strong> RESTful API endpoints returning JSON data</li>
+    <li><strong>Error Handling:</strong> Custom error pages for 404 and 500 errors</li>
+</ul>
+
+<h3>Project Structure</h3>
+<pre>
+demo-flask/
+├── app.py              # Main Flask application
+├── requirements.txt    # Python dependencies
+├── templates/          # HTML templates
+│   ├── base.html       # Base template with navigation
+│   ├── index.html      # Home page
+│   ├── about.html      # About page
+└── README.md           # Project documentation
+</pre>
+
+<h3>Learning Objectives</h3>
+<ul>
+    <li>Understanding Flask application structure</li>
+    <li>Working with routes and view functions</li>
+    <li>Template inheritance and Jinja2 syntax</li>
+    <li>Building simple API endpoints</li>
+    <li>Error handling and debugging</li>
+    <li>Basic web development concepts</li>
+</ul>
+
+<h2>Next Steps</h2>
+<p>This demo provides a foundation for building more complex Flask applications. Consider adding:</p>
+<ul>
+    <li>Database integration (SQLAlchemy)</li>
+    <li>User authentication</li>
+    <li>Form handling and validation</li>
+    <li>Static file serving</li>
+    <li>More advanced API features</li>
+</ul>
+
+<p><a href="{{ url_for('index') }}">← Back to Home</a></p>
+{% endblock %} 

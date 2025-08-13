@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h1>Welcome to Flask Demo App</h1>
+
+<p>This is a basic Flask application demonstrating fundamental web development concepts.</p>
+
+<h2>Features</h2>
+<ul>
+    <li><strong>Multiple Routes:</strong> Home, About, and API endpoints</li>
+    <li><strong>Template Inheritance:</strong> Using Jinja2 templates with a base layout</li>
+    <li><strong>API Endpoints:</strong> JSON responses for data exchange</li>
+    <li><strong>Error Handling:</strong> Custom 404 and 500 error pages</li>
+    <li><strong>Request Methods:</strong> Support for GET and POST requests</li>
+</ul>
+
+<h2>Available Pages</h2>
+<div class="api-section">
+    <h3>Web Pages</h3>
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a> - This page</li>
+        <li><a href="{{ url_for('about') }}">About</a> - Information about the app</li>
+    </ul>
+</div>
+
+<div class="api-section">
+    <h3>API Endpoints</h3>
+    <ul>
+        <li><a href="{{ url_for('api_hello') }}">/api/hello</a> - Simple greeting API</li>
+        <li><a href="{{ url_for('api_data') }}">/api/data</a> - Data API (GET/POST)</li>
+    </ul>
+</div>
+
+<h2>Getting Started</h2>
+<p>To run this application:</p>
+<ol>
+    <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
+    <li>Run the app: <code>python app.py</code></li>
+    <li>Open your browser to <code>http://localhost:5000</code></li>
+</ol>
+{% endblock %} 
